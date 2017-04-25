@@ -4,6 +4,16 @@
   <div class="form-inputs">
     <%= f.input :name %>
     <%= f.association :vocation %>
+
+    <h3>Key Assignments</h3>
+    <div id="key_assignments">
+      <%= f.simple_fields_for :key_assignments do |key_assignment| %>
+        <%= render 'key_assignment_fields', f: key_assignment %>
+      <% end %>
+      <div class="links">
+        <%= link_to_add_association 'Add Key Assignment', f, :key_assignments %>
+      </div>
+    </div>
   </div>
 
   <div class="form-actions">

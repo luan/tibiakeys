@@ -2,21 +2,19 @@
 
 <h1>Key Sets</h1>
 
-<table>
-  <thead>
+<table class="table">
+  <thead class="thead-inverse">
     <tr>
       <th>Name</th>
       <th>Vocation</th>
-      <th colspan="3"></th>
+      <th colspan="2">Actions</th>
     </tr>
   </thead>
-
   <tbody>
     <% @key_sets.each do |key_set| %>
       <tr>
-        <td><%= key_set.name %></td>
-        <td><%= key_set.vocation %></td>
-        <td><%= link_to 'Show', key_set %></td>
+        <th scope="row"><%= link_to key_set.name, key_set %></th>
+        <td><%= key_set.vocation.name %></td>
         <td><%= link_to 'Edit', edit_key_set_path(key_set) %></td>
         <td><%= link_to 'Destroy', key_set, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

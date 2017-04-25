@@ -17,7 +17,7 @@ class KeyAssignmentsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create key_assignment" do
     assert_difference('KeyAssignment.count') do
-      post key_assignments_url, params: { key_assignment: { action_object: @key_assignment.action_object, action_type: @key_assignment.action_type, key_sequence: @key_assignment.key_sequence, key_set_id: @key_assignment.key_set_id } }
+      post key_assignments_url, params: { key_assignment: { destroy: @key_assignment.destroy } }
     end
 
     assert_redirected_to key_assignment_url(KeyAssignment.last)
@@ -34,7 +34,7 @@ class KeyAssignmentsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update key_assignment" do
-    patch key_assignment_url(@key_assignment), params: { key_assignment: { action_object: @key_assignment.action_object, action_type: @key_assignment.action_type, key_sequence: @key_assignment.key_sequence, key_set_id: @key_assignment.key_set_id } }
+    patch key_assignment_url(@key_assignment), params: { key_assignment: { destroy: @key_assignment.destroy } }
     assert_redirected_to key_assignment_url(@key_assignment)
   end
 

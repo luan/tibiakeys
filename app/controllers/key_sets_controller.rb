@@ -69,6 +69,6 @@ class KeySetsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def key_set_params
-      params.require(:key_set).permit(:name, :vocation_id)
+      params.require(:key_set).permit(:name, :vocation_id, key_assignments_attributes: [:id, :key_sequence, :action_type, :action_object])
     end
 end

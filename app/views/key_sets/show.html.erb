@@ -7,8 +7,30 @@
 
 <p>
   <strong>Vocation:</strong>
-  <%= @key_set.vocation %>
+  <%= @key_set.vocation.name %>
 </p>
+
+<h3>Key Assigments</h3>
+
+<table class="table">
+  <thead class="thead-inverse">
+    <tr>
+      <th>Key</th>
+      <th>Type</th>
+      <th colspan="2">Action</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @key_set.key_assignments.each do |key_assignment| %>
+      <tr>
+        <th scope="row"><%= key_assignment.key_sequence %></th>
+        <td><%= key_assignment.action_type %></td>
+        <td><%= key_assignment.action_object %></td>
+        <td><%= link_to 'Remove', key_assignment, method: :delete %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
 
 <%= link_to 'Edit', edit_key_set_path(@key_set) %> |
 <%= link_to 'Back', key_sets_path %>

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170425042107) do
+ActiveRecord::Schema.define(version: 20170425053412) do
 
   create_table "key_assignments", force: :cascade do |t|
     t.string   "key_sequence"
