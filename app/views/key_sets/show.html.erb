@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @key_set.name %>
+</p>
+
+<p>
+  <strong>Vocation:</strong>
+  <%= @key_set.vocation %>
+</p>
+
+<%= link_to 'Edit', edit_key_set_path(@key_set) %> |
+<%= link_to 'Back', key_sets_path %>

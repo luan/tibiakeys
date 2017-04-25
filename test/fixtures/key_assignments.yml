@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  key_sequence: MyString
+  action_type: MyString
+  action_object: MyString
+  key_set: one
+
+two:
+  key_sequence: MyString
+  action_type: MyString
+  action_object: MyString
+  key_set: two

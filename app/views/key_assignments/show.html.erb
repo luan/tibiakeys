@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Key sequence:</strong>
+  <%= @key_assignment.key_sequence %>
+</p>
+
+<p>
+  <strong>Action type:</strong>
+  <%= @key_assignment.action_type %>
+</p>
+
+<p>
+  <strong>Action object:</strong>
+  <%= @key_assignment.action_object %>
+</p>
+
+<p>
+  <strong>Key set:</strong>
+  <%= @key_assignment.key_set %>
+</p>
+
+<%= link_to 'Edit', edit_key_assignment_path(@key_assignment) %> |
+<%= link_to 'Back', key_assignments_path %>

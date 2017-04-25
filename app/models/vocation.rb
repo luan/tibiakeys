@@ -1,0 +1,2 @@
+class Vocation < ApplicationRecord
+end
