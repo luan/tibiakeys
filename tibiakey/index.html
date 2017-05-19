@@ -1,0 +1,23 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Tibia Key</title>
+  <script type="text/javascript" src="elm.compiled.js"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+</body>
+
+<script type="text/javascript">
+var storedState = localStorage.getItem('tibiakey');
+var startingState = storedState ? JSON.parse(storedState) : null;
+var tibiakey = Elm.TibiaKey.fullscreen(startingState);
+tibiakey.ports.setStorage.subscribe(function(state) {
+    localStorage.setItem('tibiakey', JSON.stringify(state));
+});
+</script>
+
+</html>
